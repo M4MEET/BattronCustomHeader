@@ -1,10 +1,6 @@
 <?php declare(strict_types=1);
 /**
- * Implemented by scope01 GmbH team https://scope01.com
- *
- * @copyright scope01 GmbH https://scope01.com
- * @license proprietär
- * @link https://scope01.com
+ * Implemented by Meet Joshi
  */
 
 namespace Battron\BattronCustomHeader\Storefront\Pagelet\Header\Subscriber;
@@ -90,8 +86,6 @@ class HeaderPageletLoadedSubscriber implements EventSubscriberInterface
         $mediaIdMiddle = $this->systemConfigService->get('BattronCustomHeader.config.iconMiddle', $saleChannelId);
         $mediaIdRightEnd = $this->systemConfigService->get('BattronCustomHeader.config.iconRightEnd', $saleChannelId);
 
-
-
         // inserts the iconID in an array to loop through
         $imgArray = [
             $mediaIdLeft,
@@ -128,10 +122,9 @@ class HeaderPageletLoadedSubscriber implements EventSubscriberInterface
         // Get configuration
         $pluginConfig = $this->systemConfigService->get('BattronCustomHeader.config', $saleChannelId);
 
-        // Sending the Plugin configuration in ScopCH variable extension in TWIG
+        // Sending the Plugin configuration in BattronCH variable extension in TWIG
         $page->addExtension('BattronCH', new ArrayEntity($pluginConfig));
     }
-
 
     /**
      * @param string $mediaId
