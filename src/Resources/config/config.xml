@@ -267,7 +267,7 @@
         <title lang="de-DE">USP4</title>
 
         <input-field>
-            <name>rightend</name>
+            <name>rightEnd</name>
             <copyable>true</copyable>
             <label>USP4 text</label>
             <label lang="de-DE">USP4 text</label>
